@@ -1,0 +1,21 @@
+<!--
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zone.test.mapper.UserMapper">
+    &lt;!&ndash;可重用的SQL代码段 &ndash;&gt;
+    <sql id="user_column">id,name,pwd,dept as deptId</sql>
+
+    <select id="checkUserExists" resultType="java.util.HashMap">
+        select
+        <include refid="user_column"/>
+        from user
+        where name=#{name}
+    </select>
+
+    <update id="updateUser">
+		update user set pwd=#{pwd} where id='2'
+	</update>
+</mapper>
+-->
